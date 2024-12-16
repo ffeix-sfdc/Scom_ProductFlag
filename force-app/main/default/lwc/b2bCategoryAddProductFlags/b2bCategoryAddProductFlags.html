@@ -1,0 +1,15 @@
+<template>
+    <template if:true={isInBuilder}>
+        <div class="slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+            <span class="slds-assistive-text">warning</span>
+            <lightning-icon
+                icon-name="utility:replace" 
+                size="small" 
+                alternative-text="Barcode Scan" 
+                variant="warning"
+            ></lightning-icon>
+            &nbsp;
+            <h2>This section don't render anything, see flags rendering in "Results" standard component</h2>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,74 @@
+/* B2B Commerce Template */
+commerce_search-product-card {
+    position: relative
+}
+/* D2C Commerce Template */
+commerce-product-card {
+    position: relative
+}
+/* COMMON */
+.producttile-flag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 13px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    rotate: -30deg;
+    z-index: 1;
+}
+
+.producttile-flag .text-flag-wrapper {
+    display: -webkit-inline-box;
+    display: inline-flex;
+}
+
+.producttile-flag .text-flag {
+    background: #000000;
+    color: #ffffff;
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.producttile-flag .text-flag span {
+    font-size: .8125rem;
+    letter-spacing: 1px;
+    display: block;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgb(255, 150, 0);
+    }
+    100% {
+        background-color: rgb(255, 0, 0);
+    }
+}
+  
+@keyframes stretch {
+    0% {
+        transform: scale(.5);
+        background-color: rgb(255, 0, 0);
+        border-radius: 100%;
+    }
+    50% {
+        background-color: rgb(255, 150, 0);
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgb(255, 0, 0);
+    }
+}
+  
+@keyframes swing {
+    0% { 
+        transform: rotate(3deg); 
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}

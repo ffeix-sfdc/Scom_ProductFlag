@@ -1,0 +1,53 @@
+<template>
+    <lightning-card>
+        <lightning-layout vertical-align="start" class="slds-grid slds-wrap">
+            <lightning-layout-item size="6" class="slds-col slds-size_6-of-12" padding="around-small">
+                <lightning-input type="text" name="Name" value={name} label="Name" onchange={handleNameChange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" class="slds-col slds-size_6-of-12" padding="around-small">
+                <lightning-input type="text" name="Label__c" value={label} label="Label" onchange={handleLabelChange}></lightning-input>
+            </lightning-layout-item>            
+            <lightning-layout-item size="6" class="slds-col slds-size_6-of-12" padding="around-small">
+                <lightning-input type="color" name="Color__c" value={color} label="Color" onchange={handleColorChange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" class="slds-col slds-size_6-of-12" padding="around-small">
+                <lightning-input type="color" name="Background_Color__c" value={backgroundcolor} label="Background Color" onchange={handleBgColorChange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" class="slds-col slds-size_6-of-12" padding="around-small">
+                <lightning-input type="text" name="Rotate__c" value={rotate} label="Rotate" onchange={handleRotateChange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" class="slds-col slds-size_6-of-12" padding="around-small">
+                <lightning-select
+                    name="Animate__c"
+                    label="Animate"
+                    value={animate}
+                    options={animateOptions}
+                    onchange={handleAnimateChange}
+                >
+                </lightning-select>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-col slds-size_12-of-12" padding="around-small">
+                <p class="slds-text-title_bold slds-p-left_medium slds-p-bottom_medium">Translation</p>
+                <!-- sldsValidatorIgnoreNextLine -->
+                <lightning-datatable
+                    class="locationTable"
+                    key-field="key"
+                    data={translationDatatable}
+                    draft-values={draftValues}
+                    onsave={handleSave}
+                    show-row-number-column="true"
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column
+                    columns={columns}>
+                </lightning-datatable>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-col slds-size_12-of-12" padding="around-small">
+                <lightning-button
+                    label="Save"
+                    variant="brand"
+                    onclick={updateFlag}
+                ></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+    </lightning-card>    
+</template>
