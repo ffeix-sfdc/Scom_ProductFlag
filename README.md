@@ -1,18 +1,16 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Commerce - Product Flag management and rendering
+This extension allow to manage and append flags to Products render on PLP using standard B2B and D2C components
+![Store showing Flags](doc/Store%20-%20Product%20Flag.png)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## How to Deploy
 
-## How Do You Plan to Deploy Your Changes?
+Go to setup and assign following permision set to relevante users:
+- `B2B Category Manage Product Flags`: give access to Tab and Flag object to create and edit them.
+- `B2B Category Read Product Flags`; give read access to shopper.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Go to Setup > Object Manager > Product2 > Page Layouts, then add `Flag` to relevante layout.
 
-## Configure Your Salesforce DX Project
+Whithin Experience Builder, drop component `B2B - Category Add Product Flags` below standard `Results` (B2B) or `Results Grid` (D2C) component on Category Page, then publish.
+![Store showing Flags](doc/Experience%20Builder%20-%20Product%20Flag.png)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Create `Flags` using the Tab and assign them to Product.
