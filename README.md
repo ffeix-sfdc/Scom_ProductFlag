@@ -5,7 +5,7 @@ This extension allow to manage and append flags to Products render on PLP using 
 
 ## How to Deploy
 
-Go to setup and assign following permision set to relevante users:
+Go to setup and assign following permission set to relevante users:
 - `B2B Category Manage Product Flags`: give access to Tab and Flag object to create and edit them.
 - `B2B Category Read Product Flags`; give read access to shopper.
 
